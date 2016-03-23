@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Xiaomiweather</string>
+    <string name="weather_unit">°C</string>
+</resources>

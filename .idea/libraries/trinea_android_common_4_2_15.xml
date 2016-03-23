@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="trinea-android-common-4.2.15">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/xiaomiweather/build/intermediates/exploded-aar/cn.trinea.android.common/trinea-android-common/4.2.15/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/xiaomiweather/build/intermediates/exploded-aar/cn.trinea.android.common/trinea-android-common/4.2.15/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/cn.trinea.android.common/trinea-android-common/4.2.15/e9be5560fd56e085d958229ef42fde49a5615dc7/trinea-android-common-4.2.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

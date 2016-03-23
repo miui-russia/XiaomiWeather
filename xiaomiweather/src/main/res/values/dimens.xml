@@ -1,0 +1,195 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_size_32">32.0sp</dimen>
+    <dimen name="text_size_31">31.0sp</dimen>
+    <dimen name="text_size_30">30.0sp</dimen>
+    <dimen name="text_size_29">29.0sp</dimen>
+    <dimen name="text_size_28">28.0sp</dimen>
+    <dimen name="text_size_27">27.0sp</dimen>
+    <dimen name="text_size_26">26.0sp</dimen>
+    <dimen name="text_size_25">25.0sp</dimen>
+    <dimen name="text_size_24">24.0sp</dimen>
+    <dimen name="text_size_23">23.0sp</dimen>
+    <dimen name="text_size_22">22.0sp</dimen>
+    <dimen name="text_size_21">21.0sp</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_19">19.0sp</dimen>
+    <dimen name="text_size_18">18.0sp</dimen>
+    <dimen name="text_size_17">17.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_14">14.0sp</dimen>
+    <dimen name="text_size_13">13.0sp</dimen>
+    <dimen name="text_size_12">12.0sp</dimen>
+    <dimen name="text_size_11">11.0sp</dimen>
+    <dimen name="text_size_10">10.0sp</dimen>
+    <dimen name="text_size_9">9.0sp</dimen>
+    <dimen name="text_size_8">8.0sp</dimen>
+    <dimen name="text_size_7">7.0sp</dimen>
+    <dimen name="text_size_5">5.0sp</dimen>
+
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_90">90.0dip</dimen>
+    <dimen name="space_80">80.0dip</dimen>
+    <dimen name="space_70">70.0dip</dimen>
+    <dimen name="space_60">60.0dip</dimen>
+    <dimen name="space_50">50.0dip</dimen>
+    <dimen name="space_49">49.0dip</dimen>
+    <dimen name="space_45">45.0dip</dimen>
+    <dimen name="space_40">40.0dip</dimen>
+    <dimen name="space_35">35.0dip</dimen>
+    <dimen name="space_32">32.0dip</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_29">29.0dip</dimen>
+    <dimen name="space_28">28.0dip</dimen>
+    <dimen name="space_27">27.0dip</dimen>
+    <dimen name="space_26">26.0dip</dimen>
+    <dimen name="space_25">25.0dip</dimen>
+    <dimen name="space_24">24.0dip</dimen>
+    <dimen name="space_23">23.0dip</dimen>
+    <dimen name="space_22">22.0dip</dimen>
+    <dimen name="space_21">21.0dip</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_19">19.0dip</dimen>
+    <dimen name="space_18">18.0dip</dimen>
+    <dimen name="space_17">17.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_13">13.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_11">11.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_9">9.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_7">7.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_3">3.0dip</dimen>
+    <dimen name="space_2">2.0dip</dimen>
+    <dimen name="space_1">1.0dip</dimen>
+
+    <dimen name="tab_height">60.0dip</dimen>
+    <dimen name="padding_1">1.0dip</dimen>
+    <dimen name="padding_2">2.0dip</dimen>
+    <dimen name="padding_10">10.0dip</dimen>
+    <dimen name="padding_12">12.0dip</dimen>
+    <dimen name="padding_13">13.0dip</dimen>
+    <dimen name="padding_16">16.0dip</dimen>
+    <dimen name="padding_17">17.0dip</dimen>
+    <dimen name="padding_19">19.0dip</dimen>
+    <dimen name="padding_20">20.0dip</dimen>
+    <dimen name="padding_23">23.0dip</dimen>
+    <dimen name="padding_24">24.0dip</dimen>
+    <dimen name="padding_25">25.0dip</dimen>
+    <dimen name="padding_27">27.0dip</dimen>
+    <dimen name="padding_29">29.0dip</dimen>
+    <dimen name="padding_32">32.0dip</dimen>
+    <dimen name="padding_33">33.0dip</dimen>
+    <dimen name="padding_36">36.0dip</dimen>
+    <dimen name="padding_38">38.0dip</dimen>
+    <dimen name="padding_42">42.0dip</dimen>
+    <dimen name="padding_50">50.0dip</dimen>
+    <dimen name="padding_58">58.0dip</dimen>
+    <dimen name="padding_59">59.0dip</dimen>
+    <dimen name="padding_67">67.0dip</dimen>
+    <dimen name="padding_70">70.0dip</dimen>
+    <dimen name="padding_80">80.0dip</dimen>
+    <dimen name="padding_84">84.0dip</dimen>
+    <dimen name="padding_90">90.0dip</dimen>
+    <dimen name="padding_100">100.0dip</dimen>
+    <dimen name="padding_148">148.0dip</dimen>
+    <dimen name="padding_150">150.0dip</dimen>
+
+    <dimen name="height_1">1.0dip</dimen>
+    <dimen name="height_13">13.0dip</dimen>
+    <dimen name="height_16">16.0dip</dimen>
+    <dimen name="height_20">20.0dip</dimen>
+    <dimen name="height_25">25.0dip</dimen>
+    <dimen name="height_30">30.0dip</dimen>
+    <dimen name="height_33">33.0dip</dimen>
+    <dimen name="height_34">34.0dip</dimen>
+    <dimen name="height_40">40.0dip</dimen>
+    <dimen name="height_42">42.0dip</dimen>
+    <dimen name="height_45">45.0dip</dimen>
+    <dimen name="height_47">47.0dip</dimen>
+    <dimen name="height_48">48.0dip</dimen>
+    <dimen name="login_text_height">72.0dip</dimen>
+    <!--home-->
+
+    <dimen name="home_li_item_height">44dp</dimen>
+    <dimen name="home_li_item_padding_right">23dp</dimen>
+    <dimen name="home_li_item_padding_left">28dp</dimen>
+    <dimen name="home_li_item_padding_top">12dp</dimen>
+    <dimen name="home_li_item_padding_btm">12dp</dimen>
+
+    <dimen name="home_li_child_li_height">64dp</dimen>
+    <dimen name="home_account_detail_padding">7dp</dimen>
+    <dimen name="home_account_detail_data_width">218dp</dimen>
+
+
+    <!-- home text size-->
+
+
+
+    <dimen name="listview_first_level_fontsize">15sp</dimen>
+
+    <dimen name="first_level_fontsize">15sp</dimen>
+
+    <dimen name="second_level_fontsize">14sp</dimen>
+
+    <dimen name="third_level_fontsize">13sp</dimen>
+
+    <dimen name="fourth_level_fontsize">12sp</dimen>
+
+            <!-- -->
+    <dimen name="data_amount_fontsize">15sp</dimen>
+
+    <dimen name="home_li_title_left">14sp</dimen>
+    <dimen name="home_li_title_right_top">12sp</dimen>
+    <dimen name="home_li_title_right_btm">15sp</dimen>
+
+    <dimen name="home_li_child_item_left_top_size">14sp</dimen>
+    <dimen name="home_li_child_item_left_btm_size">12sp</dimen>
+    <dimen name="home_li_child_item_right_top_size">12sp</dimen>
+    <dimen name="home_li_child_item_right_btm_size">14sp</dimen>
+
+    <dimen name="slv_item_height">60dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="slv_item_bg_btn_width">48dip</dimen>
+    <dimen name="slv_item_bg_btn_width_img">100dip</dimen>
+
+    <dimen name="txt_size">7sp</dimen>
+    <dimen name="height_50">50.0dip</dimen>
+    <dimen name="height_56">56.0dip</dimen>
+    <dimen name="height_60">60.0dip</dimen>
+    <dimen name="height_70">70.0dip</dimen>
+    <dimen name="height_80">80.0dip</dimen>
+    <dimen name="height_99">99.0dip</dimen>
+    <dimen name="height_100">100.0dip</dimen>
+    <dimen name="height_150">150.0dip</dimen>
+    <dimen name="height_189">189.0dip</dimen>
+    <dimen name="height_200">200.0dip</dimen>
+    <dimen name="height_218">218.0dip</dimen>
+    <dimen name="height_308">308.0dip</dimen>
+
+
+    <dimen name="listview_first_level_text_size">15sp</dimen>
+
+    <dimen name="first_level_text_size">15sp</dimen>
+
+    <dimen name="second_level_text_size">14sp</dimen>
+
+    <dimen name="third_level_text_size">13sp</dimen>
+
+    <dimen name="fourth_level_text_size">12sp</dimen>
+
+    <!-- -->
+    <dimen name="data_amount_text_size">15sp</dimen>
+
+</resources>
