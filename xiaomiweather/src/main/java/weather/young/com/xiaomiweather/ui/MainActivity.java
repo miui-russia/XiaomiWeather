@@ -123,7 +123,10 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run() {
             try {
+
+                //设置睡眠2秒,达到 刷新动画效果持续!
                 Thread.sleep(2000);
+
                 String url = Constant.url + "101010100";
 
                 OkHttpClient okHttpClient = new OkHttpClient();
