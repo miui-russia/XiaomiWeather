@@ -34,6 +34,7 @@ import weather.young.com.xiaomiweather.R;
 import weather.young.com.xiaomiweather.bean.Constant;
 import weather.young.com.xiaomiweather.utils.ParseJson;
 import weather.young.com.xiaomiweather.utils.SharedPreferencesUtil;
+import weather.young.com.xiaomiweather.widget.CountView;
 
 /**
  * Description:
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
     InputStream is;
     InputStreamReader isr;
 
+    @Bind(R.id.countview)
+    CountView countview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
