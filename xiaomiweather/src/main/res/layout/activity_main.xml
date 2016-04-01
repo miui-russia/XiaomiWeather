@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--下拉刷新 组件 SwipeRefreshLayout-->
+    <!--下拉刷新 组件 -->
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
@@ -77,6 +77,6 @@
         android:id="@+id/countview"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
 </LinearLayout>

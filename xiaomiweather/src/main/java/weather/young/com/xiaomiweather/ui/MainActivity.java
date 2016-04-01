@@ -7,7 +7,6 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -58,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
     ListView followingHourListView;
     @Bind(R.id.btn)
     Button btn;
-    @Bind(R.id.cityCode)
-    EditText cityCode;
 
     //下拉刷新 组件
     @Bind(R.id.swipe_refresh)
