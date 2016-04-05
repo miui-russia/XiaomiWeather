@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                //当下拉刷洗, 此时需要点击GET按钮
                 Button button = (Button) findViewById(R.id.btn);
                 button.performClick();
             }
