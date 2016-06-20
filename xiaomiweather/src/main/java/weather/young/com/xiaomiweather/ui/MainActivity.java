@@ -194,31 +194,27 @@ public class MainActivity extends AppCompatActivity {
      */
     private void queryCityCode() {
 
-        try {
+     try {
+//            InputStreamReader inputReader = new InputStreamReader(getResources().getAssets().open("cityCode.txt"));
+            InputStreamReader inputReader = new InputStreamReader(this.getClass()
+                    .getClassLoader()
+                    .getResourceAsStream("assets/" + "citycode.txt")
+                    , "utf-8"
+            );
+            BufferedReader bufReader = new BufferedReader(inputReader);
+            String line = "";
+            String[] str = new String[2];
 
-            is = context.getResources().getAssets().open("cityCode");
+            while ((line = bufReader.readLine()) != null) {
+                str = line.split("=");
+                if (str.length == 2 && null != str[1] && !"".equals(str[1])) {
 
-            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            XmlPullParser parser = factory.newPullParser();
-            parser.setInput(is, "utf-8");
-            int eventType = parser.getEventType();
-
-            while (eventType != XmlPullParser.END_DOCUMENT) {
-                switch (eventType) {
-                    case XmlPullParser.START_DOCUMENT:
-                        break;
-                    case XmlPullParser.START_TAG:
-
-                        if ("province".equals(parser.getName())) {
-                            System.out.println(parser.getName());
-                        }
-
-                        break;
+                    System.out.println("city name: " + str[1] + " city id: " + str[0]);
                 }
-                eventType = parser.next();
             }
         } catch (Exception e) {
             e.printStackTrace();
+
         }
 
     }
