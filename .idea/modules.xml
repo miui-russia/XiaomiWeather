@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XiaomiWeather.iml" filepath="$PROJECT_DIR$/XiaomiWeather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XiaomiWeather.iml" filepath="$PROJECT_DIR$/XiaomiWeather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaomiweather/xiaomiweather.iml" filepath="$PROJECT_DIR$/xiaomiweather/xiaomiweather.iml" />
       <module fileurl="file://$PROJECT_DIR$/xiaomiweather/xiaomiweather.iml" filepath="$PROJECT_DIR$/xiaomiweather/xiaomiweather.iml" />
     </modules>
   </component>

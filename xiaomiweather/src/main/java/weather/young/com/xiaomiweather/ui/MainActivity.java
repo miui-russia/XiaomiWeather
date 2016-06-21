@@ -7,14 +7,13 @@ import android.os.Message;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.orhanobut.logger.Logger;
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserFactory;
-
+import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -33,7 +32,6 @@ import weather.young.com.xiaomiweather.R;
 import weather.young.com.xiaomiweather.bean.Constant;
 import weather.young.com.xiaomiweather.utils.ParseJson;
 import weather.young.com.xiaomiweather.utils.SharedPreferencesUtil;
-import weather.young.com.xiaomiweather.widget.CountView;
 
 /**
  * Description:
@@ -57,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
     ListView followingHourListView;
     @Bind(R.id.btn)
     Button btn;
+    @Bind(R.id.cityName)
+    EditText edCityName;
 
     //下拉刷新 组件
     @Bind(R.id.swipe_refresh)
@@ -71,13 +71,15 @@ public class MainActivity extends AppCompatActivity {
     InputStream is;
     InputStreamReader isr;
 
-    @Bind(R.id.countview)
-    CountView countview;
+    // 城市 id
+    String cityId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        Logger.init("MainActivity");
 
         //重新打开,默认读取上一次的数据
         city.setText(SharedPreferencesUtil.get(context, sharedPrefsName, "city"));
@@ -86,16 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
         //刷新动画设置
         setSwipeEvent();
-
-
-        //queryCityCode();
-
-        //获取屏幕宽高!
-        /*WindowManager wm = (WindowManager) this
-                .getSystemService(Context.WINDOW_SERVICE);
-        int width = wm.getDefaultDisplay().getWidth();
-        int height = wm.getDefaultDisplay().getHeight();
-        ToastUtils.show(context,width+"\n"+height);*/
 
     }
 
@@ -117,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn)
     void btn() {
+        findCityId();
         new Thread(runnable).start();
     }
 
@@ -128,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 //设置睡眠2秒,达到 刷新动画效果持续!
                 Thread.sleep(2000);
 
-                String url = Constant.url + "101010100";
+                String url = Constant.url + cityId;
 
                 OkHttpClient okHttpClient = new OkHttpClient();
                 Request request = new Request.Builder().url(url).build();
@@ -188,59 +181,41 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-
     /**
      * 查询 city code
+     * 这种是每次去读取文件的方式
+     * 还可以用数据库,把文件写入sqlite(可以用 ormlite 框架)
+     * 数据库存储的见: https://github.com/yangxiaoge/queryCityId
      */
-    private void queryCityCode() {
+    private void findCityId() {
 
-     try {
-//            InputStreamReader inputReader = new InputStreamReader(getResources().getAssets().open("cityCode.txt"));
-            InputStreamReader inputReader = new InputStreamReader(this.getClass()
-                    .getClassLoader()
-                    .getResourceAsStream("assets/" + "citycode.txt")
-                    , "utf-8"
-            );
+        try {
+            // 两种读取都可以
+            InputStreamReader inputReader = new InputStreamReader(getResources().getAssets().open("citycode.txt"));
+//            InputStreamReader inputReader = new InputStreamReader(this.getClass()
+//                    .getClassLoader()
+//                    .getResourceAsStream("assets/" + "citycode.txt")
+//                    , "utf-8"
+//            );
             BufferedReader bufReader = new BufferedReader(inputReader);
             String line = "";
-            String[] str = new String[2];
+            String[] str;
+
+            int i = 1;
 
             while ((line = bufReader.readLine()) != null) {
                 str = line.split("=");
-                if (str.length == 2 && null != str[1] && !"".equals(str[1])) {
-
+                String cityName = edCityName.getText().toString().trim();
+                cityName = !cityName.isEmpty() ? cityName : "南京";
+                if (str.length == 2 && null != str[1] && !"".equals(str[1]) && str[1].equals(cityName)) {
                     System.out.println("city name: " + str[1] + " city id: " + str[0]);
+
+                    cityId = str[0];
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
 
-        }
-
-    }
-
-    /**
-     * pull 解析 XML
-     *
-     * @param is
-     * @throws Exception
-     */
-    private void getCity(InputStream is) throws Exception {
-        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-        XmlPullParser parser = factory.newPullParser();
-        parser.setInput(is, "utf-8");
-        int eventType = parser.getEventType();
-
-        while (eventType != XmlPullParser.END_DOCUMENT) {
-            switch (eventType) {
-                case XmlPullParser.START_DOCUMENT:
-                    break;
-                case XmlPullParser.START_TAG:
-                    if ("China".equals(parser.getName())) {
-
-                        System.out.println(parser.getName());
-                    }
-            }
         }
     }
 

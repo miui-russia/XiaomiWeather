@@ -6,7 +6,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <!--下拉刷新 组件 -->
     <android.support.v4.widget.SwipeRefreshLayout
@@ -66,17 +66,24 @@
         </ScrollView>
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cityName"
+        android:hint="City Name"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:text="get" />
 
-    <weather.young.com.xiaomiweather.widget.CountView
+    <!--<weather.young.com.xiaomiweather.widget.CountView
         android:id="@+id/countview"
         android:layout_width="50dp"
         android:layout_height="30dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center" />-->
 
 </LinearLayout>
